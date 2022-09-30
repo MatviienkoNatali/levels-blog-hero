@@ -2,10 +2,11 @@ import * as React from "react"
 import * as style from "./banner.module.scss";
 import bannerPicture from "../../../images/hero-img.jpeg";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Pagination, Scrollbar} from "swiper";
+import {A11y, Autoplay, Pagination, Scrollbar} from "swiper";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
 
 const Banner = () => {
@@ -13,9 +14,14 @@ const Banner = () => {
         <div className={style.bannerStyle}>
             <div className="container">
                 <Swiper
-                    modules={[Pagination, Scrollbar, A11y]}
+                    modules={[Pagination, Scrollbar, A11y, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+
+                    }}
                     pagination={{ clickable: true }}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
@@ -43,7 +49,7 @@ const Banner = () => {
                                     <li>metabolic health</li>
                                     <li>ultimate guides</li>
                                 </ul>
-                                <h1>The ultimate guide to metabolic health</h1>
+                                <h1>2 The ultimate guide to metabolic health</h1>
                                 <p className="author">Casey Means, MD</p>
                                 <time>11 min read</time>
                             </div>
@@ -59,7 +65,7 @@ const Banner = () => {
                                     <li>metabolic health</li>
                                     <li>ultimate guides</li>
                                 </ul>
-                                <h1>The ultimate guide to metabolic health</h1>
+                                <h1>3 The ultimate guide to metabolic health</h1>
                                 <p className="author">Casey Means, MD</p>
                                 <time>11 min read</time>
                             </div>

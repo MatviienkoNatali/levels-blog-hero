@@ -4,6 +4,8 @@ $itemColor: rgba(0, 0, 0, 0.4);
 .list-link{
   padding: 40px 0;
   position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
   :global{
     .wrap-list{
       padding: 0 15px;
@@ -19,8 +21,8 @@ $itemColor: rgba(0, 0, 0, 0.4);
         height: 100%;
         background: linear-gradient(270deg, #f2f4f4 0%, transparent 18.75%);
         z-index: 1;
-        @include xl{
-          display: none;
+        @include lg{
+          background: linear-gradient(270deg, #e6e6e6 0%, transparent 18.75%);
         }
       }
 
@@ -38,7 +40,6 @@ $itemColor: rgba(0, 0, 0, 0.4);
       letter-spacing: 0.2em;
       white-space: nowrap;
       @include xxl{
-        display: flex;
         justify-content: center;
       }
       li{
