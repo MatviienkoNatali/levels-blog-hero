@@ -18,10 +18,10 @@ body, html {
 }
 main{
   background: $grayBgMobile;
-  margin-top: -125px;
-  padding-top: 125px;
+  padding-top: 90px;
   padding-bottom: 60px;
   @include lg{
+    padding-top: 125px;
     background: $grayBgDesktop;
     padding-bottom: 120px;
   }
